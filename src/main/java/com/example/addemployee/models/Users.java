@@ -1,19 +1,22 @@
 package com.example.addemployee.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name ="users")
 public class Users {
     @Id
+    @Column(name="Id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private Long Id;
-    private int companyId;
+
+   @Column(name="companyId")
+   private int companyId;
+   @Column(name="firstName")
     private String firstName;
+   @Column(name="lastName")
     private String lastName;
+   @Column(name="role")
     private String role;
 
     public Users() {
