@@ -1,5 +1,4 @@
-package com.example.addemployee.models.repo;
-
+package com.example.addemployee.repo;
 
 import com.example.addemployee.models.Users;
 import org.springframework.data.repository.CrudRepository;

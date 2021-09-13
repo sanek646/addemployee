@@ -22,9 +22,10 @@ public class Users {
     public Users() {
     }
 
-    public Users(String firstName, String lastName, String role) {
+    public Users(String firstName, String lastName,int companyId, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.companyId = companyId;
         this.role = role;
     }
 
@@ -66,5 +67,16 @@ public class Users {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "Id=" + Id +
+                ", companyId=" + companyId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", role='" + role + '\'' +
+                '}';
     }
 }
