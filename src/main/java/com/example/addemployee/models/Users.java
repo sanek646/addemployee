@@ -1,10 +1,11 @@
 package com.example.addemployee.models;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Table(name ="users")
-public class Users {
+@Table(name ="UsersDB")
+public class Users implements Serializable {
     @Id
     @Column(name="Id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,9 +13,9 @@ public class Users {
 
    @Column(name="companyId")
    private int companyId;
-   @Column(name="firstName")
+   @Column(name="firstname")
     private String firstName;
-   @Column(name="lastName")
+   @Column(name="lastname")
     private String lastName;
    @Column(name="role")
     private String role;
